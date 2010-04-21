@@ -1,0 +1,11 @@
+%p
+  %b
+    Name:
+  = h @auction.name
+%p
+  %b
+    Exchange rate:
+  = h @auction.exchange_rate
+= link_to 'Edit', edit_auction_path(@auction)
+|
+= link_to 'Back', auctions_path

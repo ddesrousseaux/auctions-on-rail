@@ -1,0 +1,294 @@
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 14:59:35) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: auctions: SELECT * FROM "auctions" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: auctions: SELECT * FROM "auctions" ):
+  app/controllers/auctions_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (202.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (110.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuctions (20100421125656)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "exchange_rate" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421125656')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("auctions")[0m
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:00:17) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering template within layouts/auctions
+Rendering auctions/index
+Completed in 312ms (View: 296, DB: 0) | 200 OK [http://localhost/auctions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuctions (20100420114817)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "auctions" already exists: CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "exchange_rate" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("auctions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuctions (20100420114817)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "auctions" already exists: CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "exchange_rate" float, "created_at" datetime, "updated_at" datetime) [0m
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:04:45) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+
+ActionView::MissingTemplate (Missing template auctions/index.erb in view path app/views):
+  app/controllers/auctions_controller.rb:7:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:06:03) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 15:06:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AuctionsController#new (for 127.0.0.1 at 2010-04-21 15:06:07) [GET]
+Rendering template within layouts/application
+Rendering auctions/new
+Rendered auctions/_form (296.0ms)
+Completed in 327ms (View: 312, DB: 0) | 200 OK [http://localhost/auctions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 15:06:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AuctionsController#new (for 127.0.0.1 at 2010-04-21 15:07:10) [GET]
+Rendering template within layouts/application
+Rendering auctions/new
+Rendered auctions/_form (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/auctions/new]
+
+
+Processing AuctionsController#create (for 127.0.0.1 at 2010-04-21 15:07:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"H6Q7XiP83EyJf1nEiI5jTPisn455P95wPODEcDkegwE=", "auction"=>{"name"=>"auction test 1", "exchange_rate"=>"1.5"}}
+  [4;35;1mAuction Create (0.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('auction test 1', '2010-04-21 13:07:24', '2010-04-21 13:07:24', 1.5)[0m
+Redirected to http://localhost:3001/auctions/1
+Completed in 218ms (DB: 0) | 302 Found [http://localhost/auctions]
+
+
+Processing AuctionsController#show (for 127.0.0.1 at 2010-04-21 15:07:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" WHERE ("auctions"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering auctions/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/auctions/1]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:07:26) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#new (for 127.0.0.1 at 2010-04-21 15:07:28) [GET]
+Rendering template within layouts/application
+Rendering auctions/new
+Rendered auctions/_form (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions/new]
+
+
+Processing AuctionsController#create (for 127.0.0.1 at 2010-04-21 15:07:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"H6Q7XiP83EyJf1nEiI5jTPisn455P95wPODEcDkegwE=", "auction"=>{"name"=>"auction test 1.6", "exchange_rate"=>"1.6"}}
+  [4;36;1mAuction Create (0.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('auction test 1.6', '2010-04-21 13:07:36', '2010-04-21 13:07:36', 1.6)[0m
+Redirected to http://localhost:3001/auctions/2
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/auctions]
+
+
+Processing AuctionsController#show (for 127.0.0.1 at 2010-04-21 15:07:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" WHERE ("auctions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering auctions/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/auctions/2]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:07:38) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#new (for 127.0.0.1 at 2010-04-21 15:07:40) [GET]
+Rendering template within layouts/application
+Rendering auctions/new
+Rendered auctions/_form (0.0ms)
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions/new]
+
+
+Processing AuctionsController#create (for 127.0.0.1 at 2010-04-21 15:07:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"H6Q7XiP83EyJf1nEiI5jTPisn455P95wPODEcDkegwE=", "auction"=>{"name"=>"auction test 7", "exchange_rate"=>"1.5"}}
+  [4;35;1mAuction Create (0.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('auction test 7', '2010-04-21 13:07:47', '2010-04-21 13:07:47', 1.5)[0m
+Redirected to http://localhost:3001/auctions/3
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/auctions]
+
+
+Processing AuctionsController#show (for 127.0.0.1 at 2010-04-21 15:07:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" WHERE ("auctions"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering auctions/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions/3]
+
+
+Processing AuctionsController#index to xml (for 127.0.0.1 at 2010-04-21 15:11:22) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Completed in 795ms (View: 780, DB: 0) | 200 OK [http://localhost/auctions.xml]
+
+
+Processing AuctionsController#index to xml (for 127.0.0.1 at 2010-04-21 15:12:39) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/auctions.xml]
+  [4;36;1mAuction Create (2.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('GOOG', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 559.3401)[0m
+  [4;35;1mAuction Create (3.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('EBAY', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 26.3)[0m
+  [4;36;1mAuction Create (2.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AMZN', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 148.255)[0m
+  [4;35;1mAuction Create (2.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('NDAQ', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 21.63)[0m
+  [4;36;1mAuction Create (2.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('MSFT', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 31.41)[0m
+  [4;35;1mAuction Create (2.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AAPL', '2010-04-21 14:23:46', '2010-04-21 14:23:46', 258.99)[0m
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:23:56) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 64ms (View: 44, DB: 1) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index to xml (for 127.0.0.1 at 2010-04-21 16:24:07) [GET]
+  [4;35;1mAuction Load (1.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Completed in 836ms (View: 816, DB: 1) | 200 OK [http://localhost/auctions.xml]
+  [4;36;1mAuction Create (0.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('GOOG', '2010-04-21 14:26:17', '2010-04-21 14:26:17', 558.5)[0m
+  [4;35;1mAuction Create (0.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('EBAY', '2010-04-21 14:26:18', '2010-04-21 14:26:18', 26.3325)[0m
+  [4;36;1mAuction Create (0.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AMZN', '2010-04-21 14:26:18', '2010-04-21 14:26:18', 148.23)[0m
+  [4;35;1mAuction Create (0.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('NDAQ', '2010-04-21 14:26:18', '2010-04-21 14:26:18', 21.6)[0m
+  [4;36;1mAuction Create (0.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('MSFT', '2010-04-21 14:26:18', '2010-04-21 14:26:18', 31.4)[0m
+  [4;35;1mAuction Create (0.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AAPL', '2010-04-21 14:26:18', '2010-04-21 14:26:18', 259.71)[0m
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:26:34) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:27:20) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:28:12) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM auctions[0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:28:41) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering template within layouts/application
+Rendering auctions/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/auctions]

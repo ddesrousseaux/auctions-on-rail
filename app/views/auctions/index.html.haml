@@ -1,0 +1,27 @@
+%h1
+  Listing auctions
+%table
+  %tr
+    %th
+      Name
+    %th
+      Exchange rate
+    %th
+      Last update
+  - @auctions.each do |auction|
+    %tr
+      %td
+        = h auction.name
+      %td
+        = h auction.exchange_rate
+      %td
+        = h auction.updated_at
+      %td
+        = link_to 'Show', auction
+      %td
+        = link_to 'Edit', edit_auction_path(auction)
+      %td
+        = link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New auction', new_auction_path

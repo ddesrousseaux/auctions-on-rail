@@ -1,0 +1,20 @@
+%h1
+  Search in auctions
+
+- form_for(:auction, :url => auctions_search_path, :html => {:method => 'GET'}) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.submit "Go"
+
+
+- if !@auctions.nil?
+  %ul
+  - @auctions.each do |a|
+    %li
+      = a.name
+
+  = will_paginate @auctions
